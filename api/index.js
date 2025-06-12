@@ -84,8 +84,8 @@ const orderTool = {
   ]
 };
 
-// Inisialisasi Gemini API client dengan API key
-const genAI = new GoogleGenerativeAI("AIzaSyDUAlbMgaorGBd2gyi3JzYzyTohouBj-KI"); // Ganti dengan API Key Anda
+// Inisialisasi Gemini API client dengan API key dari environment variable
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 
 // Fungsi utama untuk chat dengan Barista (dengan linear backoff)
